@@ -1,0 +1,648 @@
+<html>
+
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    $(".tabs-menu a").click(function(event) {
+        event.preventDefault();
+        $(this).parent().addClass("current");
+        $(this).parent().siblings().removeClass("current");
+        var tab = $(this).attr("href");
+        $(".tab-content").not(tab).css("display", "none");
+        $(tab).fadeIn();
+    });
+});
+</script>
+
+<script>
+$(document).ready(function()
+{
+    //slides the element with class "menu_body" when paragraph with class "menu_head" is clicked 
+    $("#firstpane p.menu_head").click(function()
+    {
+        $(this).css({backgroundImage:"url(down.png)"}).next("div.menu_body").slideToggle(300).siblings("div.menu_body").slideUp("slow");
+        $(this).siblings().css({backgroundImage:"url(left.png)"});
+    });
+    //slides the element with class "menu_body" when mouse is over the paragraph
+    $("#secondpane p.menu_head").mouseover(function()
+    {
+         $(this).css({backgroundImage:"url(down.png)"}).next("div.menu_body").slideDown(500).siblings("div.menu_body").slideUp("slow");
+         $(this).siblings().css({backgroundImage:"url(left.png)"});
+    });
+});
+</script>
+
+
+<link rel="stylesheet" href="css/circle.css">
+
+<!-- CSS for accordion menu--> 
+<style type="text/css">
+.clearfix:before,.clearfix:after {content: " "; display: table;}
+.clearfix:after {clear: both;}
+.clearfix {*zoom: 1;}
+			
+body{
+	
+	top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url('img/blur_background2.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    
+	
+}
+.menu_list {    
+    width: 70%px;
+	text-align:left;
+}
+    padding: 5px 10px;
+    cursor: pointer;
+    position: relative;
+    margin:1px;
+    font-weight:bold;
+    background: #eef4d3 url(left.png) center right no-repeat;
+}
+.menu_body {
+    display:none;
+}
+.menu_body a{
+  display:block;
+  color:#006699;
+  background-color:#EFEFEF;
+  padding-left:10px;
+  font-weight:bold;
+  text-decoration:none;
+}
+.menu_body a:hover{
+  color: #000000;
+  text-decoration:underline;
+  }
+</style>
+
+<style>
+body{
+	font-family:"Comic Sans MS";
+	font-size: 15px;
+	
+}
+.head{
+    width: 50px;
+    height: 60px;
+}
+.tabs-menu {
+  align: center;	
+  list-style: none;
+  padding: 0;
+  width: 40%;
+  margin: auto;
+}
+li  {
+    
+	display: inline;
+}
+li a {
+	
+    color: black;
+    text-align: center;
+    padding: 0px 14px;
+    text-decoration: none;
+	font-family:"Comic Sans MS";
+	font-size: 15px;
+	
+}
+li a:hover:not(.active) {
+    background-color: grey;
+	border-radius: 20px;
+	opacity: 0.5;
+}
+.current {
+    background-color: grey;
+	border-radius: 20px;
+}
+.tab-content {
+    
+    width: 80%;
+    padding: 40px;
+    display: none;
+	margin: 0 auto; 
+	text-align: center;
+}
+#tab-1 {
+ display: block;   
+}
+</style>
+
+</head>
+
+<body>
+<div class="head">
+</div>
+<div id="tabs-container">
+    <ul class="tabs-menu">
+        <li class="current"><a href="#tab-1">About Me</a></li>
+        <li><a href="#tab-2"> Education </a></li>
+        <li><a href="#tab-3"> Experience</a></li>
+        <li><a href="#tab-4"> Skills </a></li>
+		<li><a href="#tab-5"> Projects </a></li>
+		
+    </ul>
+    <div class="tab">
+        <div id="tab-1" class="tab-content" align:"center" style="width:70%">
+			
+			<p align="center" >
+			<img src="img/p1.png" style="width:180px; height:180px"> </img>
+			<h2> Ashish Kattamuri </h2>
+			<span> <b>Software Engineer, Mobile app developer, Data Visualization engineer and Game programmer </b></span>
+			</p>
+		    <p style="text-align:left"> I am recent graduate with MASTER'S in Computer Science from Colorado State University, Colorado, USA. My area of focus in MASTER'S is in Artificial Intelligence, Big Data and Algorithms. 
+			<br/><br/>I have worked in different domains and disciplines in Infomation Technology with 3+ years of experience and practiced various technologies.
+			I never fear to try new things and continous learning helped me gain expertise over different technologies.
+			</p>
+			<p align="center"> <br/>
+			<a href="https://www.linkedin.com/in/ashishkattamuri" target="_blank"> Linkedin Profile </a> &nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="https://github.com/ashishkattamuri/" target="_blank"> Github Profile </a> &nbsp;&nbsp; | &nbsp;&nbsp;<a href="">ashishkattamuri@gmail.com </a>
+			</p>
+			
+        </div>
+        
+		<div id="tab-2" class="tab-content">
+		
+		<table cellspacing="10" cellpadding="10" width="90%">
+			<tr style="vertical-align: top;">
+				<td width="10%"><img src="img/csuLogo.png" style="width:80px; height:80px"> </img></td>
+				<td width="60%"> 
+				<b>Colorado State University </b> <br/> 
+				Masters, Computer Science <br/><br/>
+				<b>Course work </b>: Big Data, Distributed Systems, Introduction to AI, Advanced Artificial Intelligence, Algorithms, Machine learning, Software process Evaluation, Fault tolerance.
+				
+				</td>
+				<td width="30%">
+				<img src="img/gradLogo.png" style="width:30px; height:30px" >	
+				&nbsp; Aug 2014 - Dec 2015  
+				
+				</td>
+			</tr>
+			</table>
+			<hr/>
+			<table cellspacing="10" cellpadding="10" width="90%">
+			<tr style="vertical-align: top;">
+				<td width="10%"><img src="img/gitamLogo.png" style="width:80px; height:80px"> </img></td>
+				<td width="60%"> 
+				<b>GITAM University, India </b> <br/> 
+				Bachelors, Computer Science <br/><br/>
+				
+				-  Developed mobile application for CSE Syllabus content <br/>
+				Course syllabus content are the most frequently visited page on the university website and is used extensively during  the examinations by the students. To ease the user pain in navigating to the specific pages and for easy reference we initiated this project which assisted students in preparation and app is most popular among the students at University.
+
+				</td>
+				<td width="30%"> 
+				<img src="img/gradLogo.png" style="width:30px; height:30px" >	
+				&nbsp;June 2008 - May 2012</td>
+			</tr>
+		</table>
+		</p>
+		</div>
+		
+        <div id="tab-3" class="tab-content">
+            
+		<div class="menu_list" id="secondpane"> <!--Code for menu starts here-->
+        <p class="menu_head"> 
+		<table>
+		<tr> 
+		<td width="70%"><b> Graduate Teaching Assistant, Colorado State University<td> 
+		<td width="30%"> Aug 2015- Dec 2015<td>
+		</tr>
+		</table>
+		
+		</p>
+        <div class="menu_body">
+        <ul type="square">
+			<li style="display:block">- Perform lab research and assist students with coursework in <b>Algorithms and Data Structures</b>. </li>
+			<li style="display:block">- Mentor students and deliver lectures in recitations. </li>
+		<ul>
+		</div>
+        
+		<p class="menu_head">
+		<table><tr> 
+		<td width="70%"><b> Game/AI programmer, Serenity Forge, Boulder, CO<td> 
+		<td width="30%"> May 2015- Aug 2015<td>
+		</tr></table>
+		</p>
+		     
+		<div class="menu_body">
+		<ul type="square">
+           <li style="display:block">- Designed and developed a 3D action platform and puzzle videogame for PC titled 'Eternal Us' using UNITY and C#. </li>
+<li style="display:block">- Worked on all aspects of programming and asset integration such as models and textures.</li>
+<li style="display:block">- Programmed for simulating physics, AI for pathfinding and control of second character which is augmented to primary character actions which is controlled by player. 
+Created camera views and cinematics.</li>
+<li style="display:block">- Associated in the level design, game mechanics and worked with artists & developers of the team. </li>
+</ul>
+
+         </div>
+        
+		<p class="menu_head">
+		<table>
+		<tr> 
+		<td width="70%"><b> Web developer, NREL, Colorado State University <td> 
+		<td width="30%"> Oct 2014- Aug 2015<td>
+		</tr>
+		</table>
+		</p>
+		<div class="menu_body">
+		<ul>
+		<li style="block">- Developed new and enhanced the existing data visualization and data analysis tools for 'citsci.org' using Highcharts.js library. </li>
+		<li style="block">- Optimized applications and features in citsci.org for improved response time.</li>
+		</ul>
+		</div>
+		
+		<p class="menu_head">
+		<table>
+		<tr> 
+		<td width="70%"><b> Software Engineer, Tata Consultancy Services, India<td> 
+		<td width="30%"> Jun 2012- Jul 2014<td>
+		</tr>
+		</table>
+		</p>
+		        <div class="menu_body">
+            <ul>
+			<li style="display: block"> - Developed standalone utility in JAVA for checking system configurations and change the browser settings as required to run the Form Signer components (an advanced digital certificate based application that provides Authentication and non-repudiation to online forms).
+ </li>
+			<li style="display: block"> - Enhanced the Online PAN Verification Facility which is used by authorized entities. </li>
+			<li style="display: block"> - Developed web applications for TIN, NSDL:  to provide the facility for users to pay income and property tax online,  2 tier approval system for approving the registered entities and developed role based functionality system and developed e-payment and feedback system for accounting system in excise & service tax</li>
+			<li style="display: block"> Resolve the security vulnerabilities in the application.</li>
+			<li style="display: block">- Developed tools and shell scripts to automate production tasks</li>
+			</ul>
+         </div>
+		 
+		 
+		 
+		<p class="menu_head">
+		<table>
+		<tr> 
+		<td width="70%"><b> Android developer- Intern, Naaima Embedded Tech, India<td> 
+		<td width="30%"> Jan 2012- Mar 2012<td>
+		</tr>
+		</table>
+		</p>
+		<div class="menu_body">
+		- Developed facebook application with customized UI using facebook Graph API on VovinetTV, an IP based android set-top boxes, which is now operational in more than 50 thousand homes.
+         </div>
+		
+		
+		</div>      <!--Code for menu ends here-->
+			
+        </div>
+		
+		
+        <div id="tab-4" class="tab-content">
+            <p>
+			<div class="clearfix">
+			
+			<table cellpadding="20" cellspacing="20">
+			<tr> 
+				<td> 
+				<div class="c100 p90 small">
+				    <span>90%<br/>JAVA</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+			
+				<td> 
+				<div class="c100 p90 small">
+				    <span>90%<br/>Python</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td> 
+				<div class="c100 p90 small">
+				    <span>80%<br/>C#</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td> 
+				<div class="c100 p90 small">
+				    <span>70%<br/>Android</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td> 
+				<div class="c100 p90 small">
+				    <span>85%<br/>UNITY</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td> 
+				<div class="c100 p90 small">
+				    <span>85%<br/> Angular </span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				
+				<td>
+				<div class="c100 p90 small">
+				    <span>90%<br/>AWS</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				
+			</tr>
+			
+			
+			<tr> 
+				<td> 
+				<div class="c100 p90 small orange">
+				    <span>60%<br/>node  js</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+			
+				<td> 
+				<div class="c100 p90 small orange">
+				    <span>90%<br/>Servlets</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td> 
+				<div class="c100 p90 small orange">
+				    <span>80%<br/>Struts</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td> 
+				<div class="c100 p90 small orange">
+				    <span>90%<br/>Highcharts</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td>
+				<div class="c100 p90 small orange">
+				    <span>90%<br/>MongoDB</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td> 
+				
+				<div class="c100 p90 small orange">
+				    <span>90%<br/>Databases</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				
+				</td>
+				
+				<td>
+				<div class="c100 p90 small orange">
+				    <span>90%<br/>AJAX</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				
+			</tr>
+			
+			<tr> 
+				<td> 
+				<div class="c100 p80 small green">
+				    <span>80%<br/>Hadoop</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+			
+				<td> 
+				<div class="c100 p90 small green" >
+				    <span>90%<br/>MapReduce</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td> 
+				<div class="c100 p95 small green">
+				    <span>95%<br/>Apache Storm</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td> 
+				<div class="c100 p90 small green">
+				    <span>90%<br/>PHP</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td> 
+				<div class="c100 p90 small green">
+				    <span>90%<br/>JSP</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td> 
+				<div class="c100 p90 small green">
+				    <span>90%<br/>JQuery</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				<td>
+				<div class="c100 p95 small green">
+				    <span>95%<br/>JSON</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+				</td>
+				
+				
+			</tr>
+			
+			</table>
+			
+			</div>
+			
+			</p>
+        </div>
+    </div>
+	
+	<div id="tab-5" class="tab-content" >
+	
+	<div style=" width:90%;text-align:left;">
+	
+	
+	
+	
+	<p>
+	<b> Title: NewtonFlix Movie Search </b><br/>
+	<b> Technologies: </b> Angular JS, Servlets, REST <br/>
+	<b> Description:</b> Integrated OMDB API to search the movie database <br/>
+	<b> Link: </b> https://github.com/ashishkattamuri/NewtonFlix </a>
+	</p>
+	
+	<hr/>
+	
+	<p>
+	<b> Title: Word scramble application </b><br/>
+	<b> Technologies: </b> Angular JS, HTML <br/>
+	<b> Description:</b> Developed a word scramble application using Angular JS. Used the wordnik api:(http://developer.wordnik.com/docs.html#!/words/getRandomWord_get_4) to pick a random word. Scramble the word and display it to users and take in keyboard input to type out the unscrambled word.<br/>
+	<b> Link: </b> <a href="http://ashishkattamuri.github.io/AngularJS/word-sramble/" target="_blank"> http://ashishkattamuri.github.io/AngularJS/word-sramble/ </a>
+	</p>
+	
+	<hr/>
+
+	<p>
+	<b> Title: Integrated ClickTripz API to search hotels</b><br/>
+	<b> Technologies: </b> HTML, Javascript, CSS <br/>
+	<b> Description:</b> Synchronized ClickTripz search form in real-time with the publisher's form such that when the user submits the form we are able to launch a ClickTripz Advertiser window or the ClickTripz Tabbed Window.<br/>
+	<b> Link:</b><a href="http://ashishkattamuri.github.io/HotelSearch/" target="_blank"> http://ashishkattamuri.github.io/HotelSearch/</a>
+	</p>
+	<hr/>
+	
+	
+	<p>
+	<b> Title: Gauging Popularity index and visualize information diffusion of a topic in Twitter </b><br/>
+	<b> Technologies: </b> MapReduce, JSON, D3, Highcharts.js, JAVA <br/>
+	<b> Description:</b> Due to the popularity of Twitter, most corporations maintain their own twitter accounts and regularly tweet about their products or services to reach out to their target demographic. Hence, determining to how many people a piece of information reaches or how rapidly the information got spread is very important to these corporations or to other agencies trying to gauge the popularity of any topic.<br/>
+	Due to sheer size and spread of the twitter-sphere, the measurement of some sort of a popularity-metric of a topic on Twitter can be used as an estimator of the popularity of the same topic among the general public. We thus focus on finding such a metric that can effectively gauge the popularity that a certain topic gains on twitter in a certain time range.
+	
+	</p>
+	<hr/>
+	
+	<p>
+	<b> Title: Detecting Frequently Occurring Hashtags from Live Twitter Message Streams</b><br/>
+	<b> Technologies: </b> Apache Storm, JSON <br/>
+	<b> Description: </b> Designed and implemented a real-time streaming data analytics system using Apache Storm. The goal of our system is to detect the most frequently appearing hash tags from the live Twitter data stream in real-time. A hashtag is a type of label or metadata tag used in social networks that makes it easier for users to find messages with a specific theme or content. Users create and use hashtags by placing the hash character (or number sign) # in front of a word or un-spaced phrase. Searching for that hashtag will then present each message that has
+been tagged with it. For example, #cannes2014 was a popular tag for images from the 2014 Cannes Film Festival.Finding popular and trendy hashtags in real-time marketing implies that you include something topical in your social media posts to help increase the overall reach.
+	</p>
+	
+	<hr/>
+	
+	<p>
+	
+	<b> Title: Estimating PageRank Values of Wikipedia Articles using MapReduce </b><br/>
+	<b> Technologies: </b> MapReduce <br/>
+	<b> Description: </b> Design and implemented a system that calculates PageRank values of currently available Wikipedia articles. The PageRank algorithm is used by Google Search to rank web pages in their search engine query results. PageRank measures the importance of web pages. The underlying assumption is that more important web pages are likely to receive more links from other web pages.
+
+	</p>
+	
+	<hr/>
+	
+	
+	<hr/>
+	<p>
+	<b> Title: United States Census Data Analysis Using MapReduce </b> <br/>
+	<b> Technologies: </b> Hadoop, MapReduce <br/>
+	<b> Description:</b> Developed MapReduce programs that parse and process the 1990 US Census dataset to support knowledge extraction over demographic data from all fifty states.
+	</p>
+	
+	<hr/>
+	<p>
+	<b> Title: Distributed Content Harvesting Using Thread Pools </b> <br/>
+	<b> Technologies: </b> JAVA <br/>
+	<b> Description:</b> Developing distributed crawlers to harvest web content. Objectives:(1) programmatically crawl pages, (2) identify and follow hyper-links within these pages, and (3) store structural information about the crawled pages
+	</p>
+	
+	<hr/>
+	
+	<p>
+	<b> Title: Routing Packets Within a Structured Peer-to-Peer (P2P) Network Overlay </b> <br/>
+	<b> Technologies: </b> JAVA <br/>
+	<b> Description:</b> (1) construct a logical overlay over a distributed set of nodes, and then (2) use partial information about nodes within the overlay to route packets.
+	</p>
+
+<hr/>	
+	
+	<p>
+	<b> Title: Implementation and empirical evaluation of examination timetabling using Stochastic local search and evolutionary computation methods. </b> <br/>
+	<b> Technologies: </b> JAVA <br/>
+	</p>
+<hr/>		
+	<p>
+	<b> Title: Effective load balancing in cloud computing using AI techniques </b> <br/>
+	<b> Technologies: </b> JAVA, CloudSim <br/>
+	</p>
+	
+	
+	
+	
+	</div>
+	
+	
+    </div>    
+	
+</div>
+</body>
+
+</html>
